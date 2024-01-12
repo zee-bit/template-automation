@@ -94,8 +94,20 @@ const replacePlaceholdersModified = (template, data) => {
 // }
 
 
-const populateTablesDynamically = (template, data) => {
-    
+const populateTablesDynamically = (template, dataList, parentAttribute) => {
+    let dynamicDataList = []
+    for (const component of template.data) {
+        if (component.type === "TABLE" && component.properties.parentAttribute === parentAttribute) {
+            placeholderData = component.data[0]
+            for (data of dataList) {
+                populatedData = replacePlaceholders(placeholderData, data)
+                populatedData.slNo = component.properties.startIndex++;
+                dynamicDataList.push(populatedData)
+            }
+            component.data = [...dynamicDataList, ...component.data.slice(1)];
+        }
+    }
+    return template;
 }
 
 
@@ -103,11 +115,17 @@ const populateTablesDynamically = (template, data) => {
 const templateJson = JSON.parse(fs.readFileSync('placeholder_template_recursive.json', 'utf-8'));
 const mappingJson = JSON.parse(fs.readFileSync('mapping.json', 'utf-8'));
 
-const newTemplate = replacePlaceholders(templateJson,mappingJson);
+
+let finalTemplate = replacePlaceholders(templateJson,mappingJson);
+for (const key in mappingJson) {
+    if (Array.isArray(mappingJson[key])) {
+        finalTemplate = populateTablesDynamically(finalTemplate, mappingJson[key], key);
+    }
+}
 
 // Populate placeholders
 // const updatedTemplate = populatePlaceholders(templateJson, mappingJson);
 
 // Output the updated JSON
 // console.log(JSON.stringify(newTemplate, null, 2));
-pdfkitlib.generateInvoice(newTemplate);
+pdfkitlib.generateInvoice(finalTemplate);

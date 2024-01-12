@@ -210,79 +210,103 @@
 			"properties": {
                 "x": 20,
                 "y": 290,
-				"": 1
+				"startIndex": 1,
+				"parentAttribute": "orderLineItems"
 			},
 			"headers": [
                 {
 			    	"label":"Sl. No",
-			    	"property": "sl",
+			    	"property": "slNo",
 			    	"width": 30,
                     "attributeKey": "slNo",
 			    	"renderer": null
 			    },
 			    {
-			    	"label":"Name",
-			    	"property": "name",
-			    	"width": 120,
-                    "attributeKey": "itemName",
+			    	"label":"Item/EAN/SKU",
+			    	"property": "sku",
+			    	"width": 70,
+                    "attributeKey": "sku",
 			    	"renderer": null
 			    },
 			    {
 			    	"label":"Description",
 			    	"property": "description",
                     "attributeKey": "description",
-			    	"width": 130,
+			    	"width": 110,
 			    	"renderer": null
-			    }, 
-			    {
-			    	"label":"HSN",
-			    	"property": "hsnCode",
-                    "attributeKey": "hsnId",
-			    	"width": 50,
-			    	"renderer": null
-			    }, 
-			    {
-			    	"label":"Quantity",
+			    },
+				{
+			    	"label":"Qty",
 			    	"property": "quantity",
                     "attributeKey": "quantity",
-			    	"width": 40,
+			    	"width": 30,
 			    	"renderer": null
-			    }, 
+			    },
 			    {
-			    	"label":"Selling Price",
-			    	"property": "actualSellingPricePerUnit",
-                    "attributeKey": "actualSellingPricePerUnit",
-			    	"width": 100,
+			    	"label":"MRP",
+			    	"property": "mrp",
+                    "attributeKey": "mrp",
+			    	"width": 50,
 			    	"renderer": null
-			    }, 
+			    },
+				{
+			    	"label":"Base Price",
+			    	"property": "baseSellingPricePerUnit",
+                    "attributeKey": "baseSellingPricePerUnit",
+			    	"width": 60,
+			    	"renderer": null
+			    },
+				{
+			    	"label":"Base Amt",
+			    	"property": "baseSellingPriceTotal",
+                    "attributeKey": "baseSellingPriceTotal",
+			    	"width": 60,
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Tax Amt",
+			    	"property": "taxTotal",
+                    "attributeKey": "taxTotal",
+			    	"width": 60,
+			    	"renderer": null
+			    },
 			    {
 			    	"label":"Total",
-			    	"property": "total",
-                    "attributeKey": "totalSellingPricePerUnit",
-			    	"width": 60,
+			    	"property": "totalAmount",
+                    "attributeKey": "totalAmount",
+			    	"width": 80,
 			    	"renderer": null
 			    }
 			],
 			"data": [
 				{
-                    "sl": "1",
-					"name": "APPAREL-SALWAR",
-					"description": "Indian clothing",
-					"hsnCode": "6282900",
-					"quantity": "2",
-					"actualSellingPricePerUnit": "$234.45",
-					"total": "$233.454"
+					"slNo": "{{slNo}}",
+					"sku": "{{channelSku}}",
+					"description": "{{description}}",
+					"mrp": "{{mrp}}",
+					"quantity": "{{quantity}}",
+					"baseSellingPricePerUnit": "{{baseSellingPricePerUnit}}",
+					"baseSellingPriceTotal": "{{baseSellingPriceTotal}}",
+					"taxTotal": "{{taxTotal}}",
+					"totalAmount": "{{totalAmount}}"
 				},
-                {
-                    "sl": "2",
-					"name": "APPAREL-JUMPER",
-					"description": "Indian clothing",
-					"hsnCode": "6101222",
-					"quantity": "1",
-					"actualSellingPricePerUnit": "$299.45",
-					"total": "$299.454"
+				{
+					"description": "Total",
+					"baseSellingPriceTotal": "{{totalBaseSellingPrice}}",
+					"taxTotal": "{{totalTaxAmount}}",
+					"totalAmount": "{{finalAmountPaid}}"
 				}
 			]
+		},
+		{
+			"type": "TEXT",
+			"x": 20,
+			"y": 370,
+			"width": 100,
+			"height": null,
+			"text": "Tax Details",
+			"font": "Helvetica",
+			"fontSize": 9
 		},
 		{
 			"type": "RECTANGLE",
