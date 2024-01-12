@@ -97,5 +97,27 @@
             "taxTotal": 100.24,
             "totalAmount": 1524.94
         }
+    ],
+    "taxDetailsList": [
+        {
+            "channelSku": "4065454349",
+            "hsnId": "61091000",
+            "igstTaxRate": 0.0,
+            "cgstTaxRate": 2.5,
+            "sgstTaxRate": 2.5,
+            "igstTaxAmount": 0.0,
+            "cgstTaxAmount": 25.62,
+            "sgstTaxAmount": 25.62
+        },
+        {
+            "channelSku": "4065454350",
+            "hsnId": "61091000",
+            "igstTaxRate": 0.0,
+            "cgstTaxRate": 2.5,
+            "sgstTaxRate": 2.5,
+            "igstTaxAmount": 0.0,
+            "cgstTaxAmount": 50.12,
+            "sgstTaxAmount": 50.12
+        }
     ]
 }

@@ -215,7 +215,7 @@
 			},
 			"headers": [
                 {
-			    	"label":"Sl. No",
+			    	"label":"#",
 			    	"property": "slNo",
 			    	"width": 30,
                     "attributeKey": "slNo",
@@ -309,17 +309,72 @@
 			"fontSize": 9
 		},
 		{
+			"type": "TABLE",
+			"properties": {
+                "x": 20,
+                "y": 390,
+				"startIndex": 1,
+				"parentAttribute": "taxDetailsList"
+			},
+			"headers": [
+                {
+			    	"label":"#",
+			    	"property": "slNo",
+			    	"width": 30,
+                    "attributeKey": "slNo",
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Item/EAN/SKU",
+			    	"property": "sku",
+			    	"width": 110,
+                    "attributeKey": "sku",
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Item Tax Code",
+			    	"property": "hsnId",
+                    "attributeKey": "hsnId",
+			    	"width": 75,
+			    	"renderer": null
+			    },
+				{
+			    	"label":"Tax Rate breakup",
+			    	"property": "taxRateBreakup",
+                    "attributeKey": "taxRateBreakup",
+			    	"width": 170,
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Tax Amount breakup",
+			    	"property": "taxAmountBreakup",
+                    "attributeKey": "taxAmountBreakup",
+			    	"width": 170,
+			    	"renderer": null
+			    }
+			],
+			"data": [
+				{
+					"slNo": "{{slNo}}",
+					"sku": "{{channelSku}}",
+					"hsnId": "{{hsnId}}",
+					"taxRateBreakup": "| IGST : {{igstTaxRate}} | SGST : {{sgstTaxRate}} | CGST : {{cgstTaxRate}} |",
+					"taxAmountBreakup": "| IGST : {{igstTaxAmount}} | SGST : {{sgstTaxAmount}} | CGST : {{cgstTaxAmount}} |"
+				}
+			]
+		},
+		{
 			"type": "RECTANGLE",
 			"lineWidth": 0.6,
 			"x1": 10,
-			"y1": 600,
+			"y1": 460,
 			"x2": 580,
-			"y2": 650
+			"y2": 550
 		},
 		{
 			"type": "TEXT",
 			"x": 10,
-			"y": 590,
+			"y": 450,
 			"width": 100,
 			"height": null,
 			"text": "Remarks",
@@ -329,7 +384,7 @@
 		{
 			"type": "TEXT",
 			"x": 12,
-			"y": 602,
+			"y": 465,
 			"width": 100,
 			"height": null,
 			"text": "Delivery at Supplier location",
