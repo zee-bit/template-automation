@@ -1,0 +1,316 @@
+{
+	"pageProperties": {
+		"options": {
+			"size": "A4",
+			"displayTitle": "test-invoice",
+			"layout": "portrait",
+			"margins": {
+				"left": 20,
+				"right": 20,
+				"top": 20,
+				"bottom": 20
+			}
+		}
+	},
+	"data": [
+		{
+			"type": "IMAGE",
+			"x": 0,
+			"y": 0,
+			"width": 100,
+			"height": null,
+			"url": "{{logoUrl}}"
+		},
+        {
+			"type": "TEXT",
+			"x": 20,
+			"y": 60,
+			"width": 100,
+			"height": null,
+			"text": "Invoice #: {{invoiceNo}}",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+        {
+			"type": "TEXT",
+			"x": 20,
+			"y": 75,
+			"width": 100,
+			"height": null,
+			"text": "Time: {{orderTime}}",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+        {
+			"type": "TEXT",
+			"x": 20,
+			"y": 90,
+			"width": 100,
+			"height": null,
+			"text": "Currency: {{currencyCode}}",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+		{
+			"type": "TEXT",
+			"x": 250,
+			"y": 20,
+			"width": 100,
+			"height": null,
+			"text": "TAX INVOICE",
+			"font": "Helvetica-Bold",
+			"fontSize": 17,
+			"fontWeight": "bold"
+		},
+		{
+			"type": "QR",
+			"x": 20,
+			"y": 700,
+			"width": 70,
+			"height": 70,
+			"margin": 0,
+			"data": "{{qrCodeUrl}}"
+		},
+		{
+			"type": "BARCODE",
+			"x": 190,
+			"y": 55,
+			"width": 13,
+			"height": 7,
+			"data": "{{orderNo}}"
+		},
+        {
+			"type": "TEXT",
+			"x": 300,
+			"y": 60,
+			"width": 100,
+			"height": null,
+			"text": "Order #: {{orderNo}}",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+        {
+			"type": "TEXT",
+			"x": 300,
+			"y": 75,
+			"width": 100,
+			"height": null,
+			"text": "Time: {{orderTime}}",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+        {
+			"type": "TEXT",
+			"x": 300,
+			"y": 90,
+			"width": 100,
+			"height": null,
+			"text": "Channel name: {{channelName}}",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+        {
+			"type": "BARCODE",
+			"x": 450,
+			"y": 55,
+			"width": 13,
+			"height": 7,
+			"data": "{{orderNo}}"
+		},
+        {
+			"type": "LINE",
+			"lineWidth": 0.7,
+			"x1": 20,
+			"y1": 45,
+			"x2": 560,
+			"y2": 45
+		},
+		{
+			"type": "TEXT",
+			"x": 20,
+			"y": 270,
+			"width": 100,
+			"height": null,
+			"text": "Invoice Items",
+			"font": "Helvetica",
+			"fontSize": 9
+		},
+		{
+			"type": "TABLE",
+			"properties": {
+                "x": 20,
+                "y": 130,
+				"type": "NORMAL"
+			},
+			"headers": [
+                {
+			    	"label":"",
+			    	"property": "column1",
+			    	"width": 70,
+                    "attributeKey": "column1",
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"FROM TO",
+			    	"property": "column2",
+			    	"width": 160,
+                    "attributeKey": "column2",
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"BILLING TO",
+			    	"property": "column3",
+                    "attributeKey": "column3",
+			    	"width": 160,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"SHIPPING TO",
+			    	"property": "column4",
+                    "attributeKey": "column4",
+			    	"width": 160,
+			    	"renderer": null
+			    }
+			],
+			"data": [
+                {
+                    "column1": "Party Name :",
+					"column2": "{{fromPartyName}}",
+					"column3": "{{billingAddress.name}}",
+					"column4": "{{shippingAddress.name}}"
+				},
+				{
+                    "column1": "GSTIN :",
+					"column2": "{{fromTin}}",
+					"column3": "{{toTin}}",
+					"column4": "{{toTin}}"
+				},
+				{
+                    "column1": "PAN :",
+					"column2": "{{panNo}}",
+					"column3": "",
+					"column4": ""
+				},
+				{
+                    "column1": "Address :",
+					"column2": "RA-3, M/s CJ Darcl Logistics Limited, \nRatan Logistics & Industrial Hub Village, \nBhiwandi, Amane, \nThane, Maharashtra, 421302",
+					"column3": "Sruthi Chaitanya\n15, 4th main road Indra nagar adyar \nChennai , Tamil Nadu - 33\nIN , 600020\n9710344444",
+					"column4": "Sruthi Chaitanya\n15, 4th main road Indra nagar adyar \nChennai , Tamil Nadu - 33\nIN , 600020\n9710344444"
+				},
+				{
+                    "column1": "Email : ",
+					"column2": "{{fromAddress.email}}",
+					"column3": "{{billingAddress.email}}",
+					"column4": "{{shippingAddress.email}}"
+				}
+            ]
+		},
+		{
+			"type": "TABLE",
+			"properties": {
+                "x": 20,
+                "y": 290,
+				"": 1
+			},
+			"headers": [
+                {
+			    	"label":"Sl. No",
+			    	"property": "sl",
+			    	"width": 30,
+                    "attributeKey": "slNo",
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Name",
+			    	"property": "name",
+			    	"width": 120,
+                    "attributeKey": "itemName",
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Description",
+			    	"property": "description",
+                    "attributeKey": "description",
+			    	"width": 130,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"HSN",
+			    	"property": "hsnCode",
+                    "attributeKey": "hsnId",
+			    	"width": 50,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Quantity",
+			    	"property": "quantity",
+                    "attributeKey": "quantity",
+			    	"width": 40,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Selling Price",
+			    	"property": "actualSellingPricePerUnit",
+                    "attributeKey": "actualSellingPricePerUnit",
+			    	"width": 100,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Total",
+			    	"property": "total",
+                    "attributeKey": "totalSellingPricePerUnit",
+			    	"width": 60,
+			    	"renderer": null
+			    }
+			],
+			"data": [
+				{
+                    "sl": "1",
+					"name": "APPAREL-SALWAR",
+					"description": "Indian clothing",
+					"hsnCode": "6282900",
+					"quantity": "2",
+					"actualSellingPricePerUnit": "$234.45",
+					"total": "$233.454"
+				},
+                {
+                    "sl": "2",
+					"name": "APPAREL-JUMPER",
+					"description": "Indian clothing",
+					"hsnCode": "6101222",
+					"quantity": "1",
+					"actualSellingPricePerUnit": "$299.45",
+					"total": "$299.454"
+				}
+			]
+		},
+		{
+			"type": "RECTANGLE",
+			"lineWidth": 0.6,
+			"x1": 10,
+			"y1": 600,
+			"x2": 580,
+			"y2": 650
+		},
+		{
+			"type": "TEXT",
+			"x": 10,
+			"y": 590,
+			"width": 100,
+			"height": null,
+			"text": "Remarks",
+			"font": "Helvetica",
+			"fontSize": 9
+		},
+		{
+			"type": "TEXT",
+			"x": 12,
+			"y": 602,
+			"width": 100,
+			"height": null,
+			"text": "Delivery at Supplier location",
+			"font": "Helvetica",
+			"fontSize": 8
+		}
+	]
+}

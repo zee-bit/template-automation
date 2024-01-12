@@ -1,0 +1,455 @@
+{
+    "template": [
+        {
+            "componentUniqueName": "component-instance-0",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 24px;\">﻿MFD BY: Ekhi Fashions</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 30,
+                "cols": 21,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-1",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">6, 1st Main Rd, NS Palya, BTM 2nd Stage</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 33,
+                "cols": 32,
+                "rows": 2,
+                "hasContent": true,
+                "layerIndex": 219
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-2",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">BTM Layout, Bengaluru, Karnataka 560076</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 35,
+                "cols": 33,
+                "rows": 2,
+                "hasContent": true,
+                "layerIndex": 215
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-3",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">Website: www.ekhifashions.com</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 37,
+                "cols": 25,
+                "rows": 2,
+                "hasContent": true,
+                "layerIndex": 213
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-4",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">EMAIL: Info@ekhifashions.com</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 39,
+                "cols": 23,
+                "rows": 2,
+                "hasContent": true,
+                "layerIndex": 211
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-5",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">MOBILE: +919632634550</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 25,
+                "y": 39,
+                "cols": 20,
+                "rows": 2,
+                "hasContent": true,
+                "layerIndex": 221
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-6",
+            "componentType": "barcode",
+            "componentData": {
+                "value": "@BARCODE@",
+                "bcOpts": {
+                    "format": "CODE128",
+                    "background": "#ffffff"
+                },
+                "displayValue": true,
+                "bold": false,
+                "textAlign": "center",
+                "textPosition": "bottom",
+                "fontSize": 10,
+                "slice": false,
+                "enlargedCharacters": 3,
+                "horizontal": true,
+                "flip": false,
+                "attrKey": "BARCODE",
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                }
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 16,
+                "cols": 21,
+                "rows": 7,
+                "hasContent": true,
+                "layerIndex": 331
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-7",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">MRP Rs.</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 22,
+                "y": 15,
+                "cols": 7,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 325
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-8",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">﻿@MRP@</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "MRP",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 29,
+                "y": 15,
+                "cols": 8,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 333
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-9",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">(Incl. of all taxes.)</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 1
+            },
+            "dashboard": {
+                "x": 22,
+                "y": 18,
+                "cols": 15,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 327
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-10",
+            "componentType": "qrcode",
+            "componentData": {
+                "qrData": "@12345678item@",
+                "horizontalAlignment": "mx-auto",
+                "verticalAlignment": "my-auto",
+                "errorCorrectionLevel": "M",
+                "colorDark": "#000000",
+                "colorLight": "#ffffff",
+                "width": 110,
+                "margin": 0,
+                "displayValue": false,
+                "bold": false,
+                "textPosition": "bottom",
+                "horizontal": true,
+                "flip": false,
+                "attrKey": "item-code",
+                "mapAttr": true,
+                "attrCategory": null
+            },
+            "dashboard": {
+                "x": 37,
+                "y": 15,
+                "cols": 11,
+                "rows": 10,
+                "hasContent": true,
+                "layerIndex": 297
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-11",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 32px;\">@BARCODE@</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "BARCODE",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 23,
+                "cols": 35,
+                "rows": 4,
+                "hasContent": true,
+                "layerIndex": 329
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-12",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">MFD: </span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 27,
+                "cols": 5,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 267
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-13",
+            "componentType": "date",
+            "componentData": {
+                "date": "2023-11-28T08:50:15.010Z",
+                "format": "MMM, YYYY",
+                "horizontal": true,
+                "flip": false,
+                "background": "#ffffff",
+                "color": "#000000",
+                "fontSize": 20,
+                "bold": false,
+                "printingDate": true
+            },
+            "dashboard": {
+                "x": 6,
+                "y": 27,
+                "cols": 12,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 278
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-14",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 24px;\">SIZE:</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 27,
+                "cols": 6,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 281
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-15",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 20px;\">NET QTY : 01 Piece</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 33,
+                "y": 27,
+                "cols": 15,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 276
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-16",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "<p><span style=\"font-size: 24px;\">@SIZE@</span></p>",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "SIZE",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 25,
+                "y": 27,
+                "cols": 6,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 283
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-17",
+            "componentType": "table",
+            "componentData": {
+                "horizontal": true,
+                "flip": false,
+                "bgColor": "#ffffff",
+                "border": "complete",
+                "borderColor": "#000000",
+                "borderWidth": "1px",
+                "rows": 2,
+                "cols": 2,
+                "data": {
+                    "1.1": {
+                        "width": "",
+                        "value": "Sample Line Items"
+                    },
+                    "0.0": {
+                        "width": "",
+                        "value": "Sample Table"
+                    },
+                    "0.1": {
+                        "width": "",
+                        "value": "Test"
+                    },
+                    "1.0": {
+                        "value": "Hello There",
+                        "width": ""
+                    }
+                },
+                "attrKey": [],
+                "fontSize": 14,
+                "textAlignment": "start",
+                "isBold": false,
+                "isItalic": false,
+                "isUnderlined": false,
+                "removedElements": []
+            },
+            "dashboard": {
+                "x": 1,
+                "y": 8,
+                "cols": 47,
+                "rows": 6,
+                "hasContent": true,
+                "layerIndex": 340
+            }
+        }
+    ],
+    "gridDimensions": {
+        "rows": 50,
+        "cols": 50
+    }
+}

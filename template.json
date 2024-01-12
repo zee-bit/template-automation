@@ -1,0 +1,203 @@
+{
+	"pageProperties": {
+		"options": {
+			"size": "A4",
+			"displayTitle": "test-invoice",
+			"layout": "portrait",
+			"margins": {
+				"left": 20,
+				"right": 20,
+				"top": 20,
+				"bottom": 20
+			}
+		}
+	},
+	"data": [
+		{
+			"type": "LOGO",
+			"x": 0,
+			"y": 0,
+			"width": 100,
+			"height": null,
+			"url": "damensch.png"
+		},
+		{
+			"type": "TEXT",
+			"x": 250,
+			"y": 30,
+			"width": 100,
+			"height": null,
+			"text": "TAX INVOICE",
+			"font": "Helvetica-Bold",
+			"fontSize": 17,
+			"fontWeight": "bold"
+		},
+		{
+			"type": "QR",
+			"x": 150,
+			"y": 50,
+			"width": 70,
+			"height": 70,
+			"margin": 0,
+			"data": "qr_code_data_here"
+		},
+		{
+			"type": "LINE",
+			"x1": 30,
+			"y1": 45,
+			"x2": 550,
+			"y2": 45
+		},
+		{
+			"type": "BARCODE",
+			"x": 400,
+			"y": 55,
+			"width": 10,
+			"height": 10,
+			"data": "barcode_data"
+		},
+		{
+			"type": "TEXT",
+			"x": 430,
+			"y": 30,
+			"width": 100,
+			"height": null,
+			"text": "Damensch Apparel Pvt Ltd",
+			"font": "Helvetica",
+			"fontSize": 10
+		},
+		{
+			"type": "ADDRESS",
+			"width": null,
+			"height": null,
+			"header": {
+				"x": 30,
+				"y": 150,
+				"text": "FROM ADDRESS",
+				"font": "Helvetica-Bold",
+				"fontSize": 14
+			},
+			"data": {
+				"x": 30,
+				"y": 180,
+				"name": "Your Name",
+				"street": "123 Main St",
+				"city": "City",
+				"state": "State",
+				"zip": "12345"
+			}
+		},
+		{
+			"type": "ADDRESS",
+			"width": null,
+			"height": null,
+			"header": {
+				"x": 230,
+				"y": 150,
+				"text": "BILLING ADDRESS",
+				"font": "Helvetica-Bold",
+				"fontSize": 14
+			},
+			"data": {
+				"x": 230,
+				"y": 180,
+				"name": "Billing Name",
+				"street": "Billing Main St",
+				"city": "Billing City",
+				"state": "Billing State",
+				"zip": "123456"
+			}
+		},
+		{
+			"type": "ADDRESS",
+			"width": null,
+			"height": null,
+			"header": {
+				"x": 430,
+				"y": 150,
+				"text": "SHIPPING ADDRESS",
+				"font": "Helvetica-Bold",
+				"fontSize": 14
+			},
+			"data": {
+				"x": 430,
+				"y": 180,
+				"name": "Shipping Name",
+				"street": "123 Main St",
+				"city": "Shipping City",
+				"state": "Shipping State",
+				"zip": "456789"
+			}
+		},
+		{
+			"type": "TABLE",
+			"properties": {
+
+			},
+			"headers": [
+			    {
+			    	"label":"Name",
+			    	"property": "name",
+			    	"width": 60,
+			    	"renderer": null
+			    },
+			    {
+			    	"label":"Description",
+			    	"property": "description",
+			    	"width": 150,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Price 1",
+			    	"property": "price1",
+			    	"width": 100,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Price 2",
+			    	"property": "price2",
+			    	"width": 100,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Price 3",
+			    	"property": "price3",
+			    	"width": 80,
+			    	"renderer": null
+			    }, 
+			    {
+			    	"label":"Price 4",
+			    	"property": "price4",
+			    	"width": 63,
+			    	"renderer": null
+			    }
+			],
+			"data": [
+				{
+					"name": "APPAREL-SALWAR",
+					"description": "Indian clothing",
+					"price1": "$234.99",
+					"price2": "$456.12",
+					"price3": "$234.45",
+					"price4": "$233.454"
+				},
+				{
+					"name": "MENS HOODIE",
+					"description": "hoodie for winter",
+					"price1": "NIL",
+					"price2": "$123.45",
+					"price3": "$6545",
+					"price4": "$67654"
+				},
+				{
+					"name": "KJFBEFIEIUNCWOIHW",
+					"description": "sj jbfw wqdi ewdow",
+					"price1": "$67",
+					"price2": "$987",
+					"price3": "$96",
+					"price4": "$909"
+				}
+			]
+		}
+	]
+}

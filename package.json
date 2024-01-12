@@ -1,0 +1,20 @@
+{
+  "name": "template_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node pdfkit-from-json.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bwip-js": "^4.1.2",
+    "jsbarcode": "^3.11.6",
+    "pdfkit": "^0.13.0",
+    "pdfkit-table": "^0.1.99",
+    "qrcode": "^1.5.3"
+  }
+}
