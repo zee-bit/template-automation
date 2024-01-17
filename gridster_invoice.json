@@ -1,0 +1,754 @@
+{
+    "template": [
+        {
+            "componentUniqueName": "component-instance-0",
+            "componentType": "image",
+            "componentData": {
+                "imgSrc": "image-url",
+                "imgUrl": "{{logoUrl}}",
+                "mapAttr": false,
+                "horizontal": true,
+                "flip": false,
+                "background": "#ffffff"
+            },
+            "dashboard": {
+                "x": 0,
+                "y": 0,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 17
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-1",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Invoice #: {{invoiceNo}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 60,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-2",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Time: {{orderTime}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 75,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-3",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Currency: {{currencyCode}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 90,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-4",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "TAX INVOICE",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 250,
+                "y": 20,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-5",
+            "componentType": "qrcode",
+            "componentData": {
+                "qrData": "{{qrCodeUrl}}",
+                "horizontalAlignment": "mx-auto",
+                "verticalAlignment": "my-auto",
+                "errorCorrectionLevel": "M",
+                "colorDark": "#000000",
+                "colorLight": "#ffffff",
+                "width": 110,
+                "margin": 0,
+                "displayValue": false,
+                "bold": false,
+                "textPosition": "bottom",
+                "horizontal": true,
+                "flip": false,
+                "attrKey": "item-code",
+                "mapAttr": true,
+                "attrCategory": null
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 700,
+                "cols": 70,
+                "rows": 70,
+                "hasContent": true,
+                "layerIndex": 297
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-6",
+            "componentType": "barcode",
+            "componentData": {
+                "value": "{{orderNo}}",
+                "bcOpts": {
+                    "format": "CODE128",
+                    "background": "#ffffff"
+                },
+                "displayValue": true,
+                "bold": false,
+                "textAlign": "center",
+                "textPosition": "bottom",
+                "fontSize": 10,
+                "slice": false,
+                "enlargedCharacters": 3,
+                "horizontal": true,
+                "flip": false,
+                "attrKey": "BARCODE",
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                }
+            },
+            "dashboard": {
+                "x": 190,
+                "y": 55,
+                "cols": 13,
+                "rows": 7,
+                "hasContent": true,
+                "layerIndex": 331
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-7",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Order #: {{orderNo}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 300,
+                "y": 60,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-8",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Order #: {{orderNo}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 300,
+                "y": 60,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-9",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Time: {{orderTime}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 300,
+                "y": 75,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-10",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Channel name: {{channelName}}",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 300,
+                "y": 90,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-11",
+            "componentType": "barcode",
+            "componentData": {
+                "value": "{{orderNo}}",
+                "bcOpts": {
+                    "format": "CODE128",
+                    "background": "#ffffff"
+                },
+                "displayValue": true,
+                "bold": false,
+                "textAlign": "center",
+                "textPosition": "bottom",
+                "fontSize": 10,
+                "slice": false,
+                "enlargedCharacters": 3,
+                "horizontal": true,
+                "flip": false,
+                "attrKey": "BARCODE",
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                }
+            },
+            "dashboard": {
+                "x": 450,
+                "y": 55,
+                "cols": 13,
+                "rows": 7,
+                "hasContent": true,
+                "layerIndex": 331
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-12",
+            "componentType": "line",
+            "componentData": {
+                "editorContent": null,
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": false,
+                "attrCategory": null,
+                "attrKey": "",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x1": 20,
+                "y1": 45,
+                "x2": 560,
+                "y2": 45,
+                "cols": 100,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 209
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-13",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Invoice Items",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "MRP",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 270,
+                "cols": 100,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 333
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-14",
+            "componentType": "table",
+            "componentData": {
+                "horizontal": true,
+                "flip": false,
+                "bgColor": "#ffffff",
+                "border": "complete",
+                "borderColor": "#000000",
+                "borderWidth": "1px",
+                "rows": 6,
+                "cols": 4,
+                "data": {
+                    "0.0": {
+                        "width": 70,
+                        "value": ""
+                    },
+                    "0.1": {
+                        "width": 160,
+                        "value": "FROM TO"
+                    },
+                    "0.2": {
+                        "width": 160,
+                        "value": "BILLING TO"
+                    },
+                    "0.3": {
+                        "width": 160,
+                        "value": "SHIPPING TO"
+                    },
+                    "1.0": {
+                        "width": 70,
+                        "value": "Party Name :"
+                    },
+                    "1.1": {
+                        "width": 160,
+                        "value": "{{fromPartyName}}"
+                    },
+                    "1.2": {
+                        "width": 160,
+                        "value": "{{billingAddress.name}}"
+                    },
+                    "1.3": {
+                        "width": 160,
+                        "value": "{{shippingAddress.name}}"
+                    },
+                    "2.0": {
+                        "width": 70,
+                        "value": "GSTIN :"
+                    },
+                    "2.1": {
+                        "width": 160,
+                        "value": "{{fromTin}}"
+                    },
+                    "2.2": {
+                        "width": 160,
+                        "value": "{{toTin}}"
+                    },
+                    "2.3": {
+                        "width": 160,
+                        "value": "{{toTin}}"
+                    },
+                    "3.0": {
+                        "width": 70,
+                        "value": "PAN :"
+                    },
+                    "3.1": {
+                        "width": 160,
+                        "value": "{{panNo}}"
+                    },
+                    "3.2": {
+                        "width": 160,
+                        "value": ""
+                    },
+                    "3.3": {
+                        "width": 160,
+                        "value": ""
+                    },
+                    "4.0": {
+                        "width": 70,
+                        "value": "Address :"
+                    },
+                    "4.1": {
+                        "width": 160,
+                        "value": "RA-3, M/s CJ Darcl Logistics Limited, \nRatan Logistics & Industrial Hub Village, \nBhiwandi, Amane, \nThane, Maharashtra, 421302"
+                    },
+                    "4.2": {
+                        "width": 160,
+                        "value": "Sruthi Chaitanya\n15, 4th main road Indra nagar adyar \nChennai , Tamil Nadu - 33\nIN , 600020\n9710344444"
+                    },
+                    "4.3": {
+                        "width": 160,
+                        "value": "Sruthi Chaitanya\n15, 4th main road Indra nagar adyar \nChennai , Tamil Nadu - 33\nIN , 600020\n9710344444"
+                    },
+                    "5.0": {
+                        "width": 70,
+                        "value": "Eamil :"
+                    },
+                    "5.1": {
+                        "width": 160,
+                        "value": "{{fromAddress.email}}"
+                    },
+                    "5.2": {
+                        "width": 160,
+                        "value": "{{billingAddress.email}}"
+                    },
+                    "5.3": {
+                        "width": 160,
+                        "value": "{{shippingAddress.email}}"
+                    }
+                },
+                "attrKey": [],
+                "fontSize": 14,
+                "textAlignment": "start",
+                "isBold": false,
+                "isItalic": false,
+                "isUnderlined": false,
+                "removedElements": []
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 130,
+                "cols": null,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 340
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-15",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Tax Details",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "MRP",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 370,
+                "cols": 100,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 333
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-16",
+            "componentType": "table",
+            "componentData": {
+                "horizontal": true,
+                "flip": false,
+                "bgColor": "#ffffff",
+                "border": "complete",
+                "borderColor": "#000000",
+                "borderWidth": "1px",
+                "rows": 3,
+                "cols": 9,
+                "data": {
+                    "0.0": {
+                        "width": 30,
+                        "value": "#"
+                    },
+                    "0.1": {
+                        "width": 70,
+                        "value": "Item/SKU/EAN"
+                    },
+                    "0.2": {
+                        "width": 110,
+                        "value": "Description"
+                    },
+                    "0.3": {
+                        "width": 30,
+                        "value": "Quantity"
+                    },
+                    "0.4": {
+                        "width": 50,
+                        "value": "MRP"
+                    },
+                    "0.5": {
+                        "width": 60,
+                        "value": "Base Price"
+                    },
+                    "0.6": {
+                        "width": 60,
+                        "value": "Base Amt"
+                    },
+                    "0.7": {
+                        "width": 60,
+                        "value": "Tax Amt"
+                    },
+                    "0.8": {
+                        "width": 80,
+                        "value": "Total"
+                    },
+                    "1.0": {
+                        "width": 30,
+                        "value": "{{slNo}}"
+                    },
+                    "1.1": {
+                        "width": 70,
+                        "value": "{{channelSku}}"
+                    },
+                    "1.2": {
+                        "width": 110,
+                        "value": "{{description}}"
+                    },
+                    "1.3": {
+                        "width": 30,
+                        "value": "{{mrp}}"
+                    },
+                    "1.4": {
+                        "width": 50,
+                        "value": "{{quantity}}"
+                    },
+                    "1.5": {
+                        "width": 60,
+                        "value": "{{baseSellingPricePerUnit}}"
+                    },
+                    "1.6": {
+                        "width": 60,
+                        "value": "{{baseSellingPriceTotal}}"
+                    },
+                    "1.7": {
+                        "width": 60,
+                        "value": "{{taxTotal}}"
+                    },
+                    "1.8": {
+                        "width": 80,
+                        "value": "{{totalAmount}}"
+                    }
+                },
+                "attrKey": [],
+                "fontSize": 14,
+                "textAlignment": "start",
+                "isBold": false,
+                "isItalic": false,
+                "isUnderlined": false,
+                "removedElements": []
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 290,
+                "cols": null,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 340
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-17",
+            "componentType": "table",
+            "componentData": {
+                "horizontal": true,
+                "flip": false,
+                "bgColor": "#ffffff",
+                "border": "complete",
+                "borderColor": "#000000",
+                "borderWidth": "1px",
+                "rows": 2,
+                "cols": 5,
+                "data": {
+                    "0.0": {
+                        "width": 30,
+                        "value": "#"
+                    },
+                    "0.1": {
+                        "width": 70,
+                        "value": "Item/SKU/EAN"
+                    },
+                    "0.2": {
+                        "width": 110,
+                        "value": "Item Tax Code"
+                    },
+                    "0.3": {
+                        "width": 30,
+                        "value": "Tax Rate breakup"
+                    },
+                    "0.4": {
+                        "width": 50,
+                        "value": "Tax Amount breakup"
+                    },
+                    "1.0": {
+                        "width": 30,
+                        "value": "{{slNo}}"
+                    },
+                    "1.1": {
+                        "width": 70,
+                        "value": "{{channelSku}}"
+                    },
+                    "1.2": {
+                        "width": 110,
+                        "value": "{{hsnId}}"
+                    },
+                    "1.3": {
+                        "width": 30,
+                        "value": "| IGST : {{igstTaxRate}} | SGST : {{sgstTaxRate}} | CGST : {{cgstTaxRate}} |"
+                    },
+                    "1.4": {
+                        "width": 50,
+                        "value": "| IGST : {{igstTaxAmount}} | SGST : {{sgstTaxAmount}} | CGST : {{cgstTaxAmount}} |"
+                    }
+                },
+                "attrKey": [],
+                "fontSize": 14,
+                "textAlignment": "start",
+                "isBold": false,
+                "isItalic": false,
+                "isUnderlined": false,
+                "removedElements": []
+            },
+            "dashboard": {
+                "x": 20,
+                "y": 390,
+                "cols": null,
+                "rows": null,
+                "hasContent": true,
+                "layerIndex": 340
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-18",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Remarks",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "MRP",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 10,
+                "y": 450,
+                "cols": 100,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 333
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-19",
+            "componentType": "text",
+            "componentData": {
+                "editorContent": "Delivery at Supplier location",
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "MRP",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x": 12,
+                "y": 465,
+                "cols": 100,
+                "rows": 3,
+                "hasContent": true,
+                "layerIndex": 333
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-20",
+            "componentType": "rectangle",
+            "componentData": {
+                "editorContent": null,
+                "horizontal": true,
+                "flip": false,
+                "mapAttr": true,
+                "attrCategory": {
+                    "name": "ALL"
+                },
+                "attrKey": "MRP",
+                "background": "#ffffff",
+                "letterSpacing": 0
+            },
+            "dashboard": {
+                "x1": 10,
+                "y1": 460,
+                "cols": 570,
+                "rows": 90,
+                "hasContent": true,
+                "layerIndex": 333
+            }
+        }
+    ],
+    "gridDimensions": {
+        "rows": 595,
+        "cols": 841
+    },
+    "pageProperties": {
+        "layout": "portrait",
+        "margins": {
+            "left": 20,
+            "right": 20,
+            "top": 20,
+            "bottom": 20
+        }
+    }
+}
