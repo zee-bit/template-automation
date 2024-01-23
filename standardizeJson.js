@@ -60,6 +60,33 @@ function convertComponentData(component) {
       newData.options = component.bcOpts;
       break;
 
+    case 'shape':
+      // Handle all shapes
+      switch (component.componentData.type) {
+        case 'line':
+          // Handle line shape
+          newData.type = 'LINE';
+          newData.x = component.dashboard.x;
+          newData.y = component.dashboard.y;
+          newData.x2 = newData.x + component.dashboard.cols;
+          newData.y2 = newData.y + component.dashboard.rows;
+          break;
+
+        case 'rectangle':
+          // Handle rectangle shape
+          newData.type = 'RECTANGLE';
+          newData.x = component.dashboard.x;
+          newData.y = component.dashboard.y;
+          newData.x2 = newData.x + component.dashboard.cols;
+          newData.y2 = newData.y + component.dashboard.rows;
+          break;
+
+        default:
+          break;
+
+      }
+      break;
+
     case 'line':
       // Handle line
       newData.x = component.dashboard.x1;
@@ -181,6 +208,6 @@ function convertJson(originalJson) {
 const convertedJson = convertJson(originalJson);
 
 // Write the converted JSON to a new file
-fs.writeFileSync('./converted.json', JSON.stringify(convertedJson, null, 2));
+fs.writeFileSync('./standard.json', JSON.stringify(convertedJson, null, 2));
 
-console.log('Conversion complete. Check converted.json');
+console.log('Conversion to standard template complete. Check standard.json');

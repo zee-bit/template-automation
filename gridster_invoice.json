@@ -272,24 +272,26 @@
         },
         {
             "componentUniqueName": "component-instance-12",
-            "componentType": "line",
+            "componentType": "shape",
             "componentData": {
-                "editorContent": null,
                 "horizontal": true,
                 "flip": false,
-                "mapAttr": false,
-                "attrCategory": null,
-                "attrKey": "",
                 "background": "#ffffff",
-                "letterSpacing": 0
+                "type": "line",
+                "color": "#ffffff",
+                "borderType": "solid",
+                "borderColor": "#000000",
+                "borderWidth": "1",
+                "alignment": "center",
+                "class": "line"
             },
             "dashboard": {
-                "x1": 20,
-                "y1": 45,
+                "x": 20,
+                "y": 45,
                 "cols": 540,
                 "rows": 0,
                 "hasContent": true,
-                "layerIndex": 209
+                "layerIndex": 6
             }
         },
         {
@@ -711,26 +713,26 @@
         },
         {
             "componentUniqueName": "component-instance-20",
-            "componentType": "rectangle",
+            "componentType": "shape",
             "componentData": {
-                "editorContent": null,
                 "horizontal": true,
                 "flip": false,
-                "mapAttr": true,
-                "attrCategory": {
-                    "name": "ALL"
-                },
-                "attrKey": "MRP",
                 "background": "#ffffff",
-                "letterSpacing": 0
+                "type": "rectangle",
+                "color": "#ffffff",
+                "borderType": "solid",
+                "borderColor": "#000000",
+                "borderWidth": "1",
+                "alignment": "center",
+                "class": "rectangle"
             },
             "dashboard": {
-                "x1": 10,
-                "y1": 460,
+                "x": 10,
+                "y": 460,
                 "cols": 570,
                 "rows": 90,
                 "hasContent": true,
-                "layerIndex": 333
+                "layerIndex": 4
             }
         }
     ],

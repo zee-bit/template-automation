@@ -1,5 +1,5 @@
 const fs = require('fs');
-const pdfkitlib = require("./pdfkit-from-json");
+// const pdfkitlib = require("./pdfkit-from-json");
 // const 
 
 function populatePlaceholders(template, mapping) {
@@ -112,7 +112,7 @@ const populateTablesDynamically = (template, dataList, parentAttribute) => {
 
 
 // Read template JSON and mapping JSON from files
-const templateJson = JSON.parse(fs.readFileSync('converted.json', 'utf-8'));
+const templateJson = JSON.parse(fs.readFileSync('standard.json', 'utf-8'));
 const mappingJson = JSON.parse(fs.readFileSync('mapping.json', 'utf-8'));
 
 
@@ -128,4 +128,7 @@ for (const key in mappingJson) {
 
 // Output the updated JSON
 // console.log(JSON.stringify(newTemplate, null, 2));
-pdfkitlib.generateInvoice(finalTemplate);
+fs.writeFileSync('./final_template.json', JSON.stringify(finalTemplate, null, 2));
+console.log('Population of dynamic values complete. Check final_template.json');
+
+//pdfkitlib.generateInvoice(finalTemplate);

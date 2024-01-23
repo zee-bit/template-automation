@@ -330,16 +330,16 @@ const sumArray = (arr, endIndex) => {
 };
 
 // Load the JSON data from file
-const jsonData = require('./template.json');
+//const jsonData = require('./template.json');
 
 // Generate the PDF
 // generateInvoice(jsonData);
 
 
+const finalTemplate = JSON.parse(fs.readFileSync('final_template.json', 'utf-8'));
+generateInvoice(finalTemplate);
 
-
-
-module.exports = {generateInvoice};
+//module.exports = {generateInvoice};
 
 
 

@@ -1,0 +1,412 @@
+{
+  "pageProperties": {
+    "options": {
+      "size": "A4",
+      "displayTitle": "test-invoice",
+      "layout": "portrait",
+      "margins": {
+        "left": 20,
+        "right": 20,
+        "top": 20,
+        "bottom": 20
+      }
+    }
+  },
+  "data": [
+    {
+      "type": "IMAGE",
+      "x": 0,
+      "y": 0,
+      "width": 100,
+      "height": null,
+      "url": "{{logoUrl}}"
+    },
+    {
+      "type": "TEXT",
+      "x": 20,
+      "y": 60,
+      "width": 100,
+      "height": null,
+      "text": "Invoice #: {{invoiceNo}}",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TEXT",
+      "x": 20,
+      "y": 75,
+      "width": 100,
+      "height": null,
+      "text": "Time: {{orderTime}}",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TEXT",
+      "x": 20,
+      "y": 90,
+      "width": 100,
+      "height": null,
+      "text": "Currency: {{currencyCode}}",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TEXT",
+      "x": 250,
+      "y": 20,
+      "width": 100,
+      "height": null,
+      "text": "TAX INVOICE",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "QR",
+      "x": 20,
+      "y": 700,
+      "width": 70,
+      "height": 70,
+      "data": "{{qrCodeUrl}}"
+    },
+    {
+      "type": "BARCODE",
+      "x": 190,
+      "y": 55,
+      "width": 13,
+      "height": 7,
+      "data": "{{orderNo}}"
+    },
+    {
+      "type": "TEXT",
+      "x": 300,
+      "y": 60,
+      "width": 100,
+      "height": null,
+      "text": "Order #: {{orderNo}}",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TEXT",
+      "x": 300,
+      "y": 75,
+      "width": 100,
+      "height": null,
+      "text": "Time: {{orderTime}}",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TEXT",
+      "x": 300,
+      "y": 90,
+      "width": 100,
+      "height": null,
+      "text": "Channel name: {{channelName}}",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "BARCODE",
+      "x": 450,
+      "y": 55,
+      "width": 13,
+      "height": 7,
+      "data": "{{orderNo}}"
+    },
+    {
+      "type": "LINE",
+      "x": 20,
+      "y": 45,
+      "width": 540,
+      "height": 0,
+      "x2": 560,
+      "y2": 45
+    },
+    {
+      "type": "TEXT",
+      "x": 20,
+      "y": 270,
+      "width": 100,
+      "height": 3,
+      "text": "Invoice Items",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TABLE",
+      "x": 20,
+      "y": 130,
+      "width": null,
+      "height": null,
+      "properties": {
+        "x": 20,
+        "y": 130,
+        "startIndex": 1
+      },
+      "headers": [
+        {
+          "label": "",
+          "property": "column1",
+          "width": 70,
+          "attributeKey": "column1",
+          "renderer": null
+        },
+        {
+          "label": "FROM TO",
+          "property": "column2",
+          "width": 160,
+          "attributeKey": "column2",
+          "renderer": null
+        },
+        {
+          "label": "BILLING TO",
+          "property": "column3",
+          "width": 160,
+          "attributeKey": "column3",
+          "renderer": null
+        },
+        {
+          "label": "SHIPPING TO",
+          "property": "column4",
+          "width": 160,
+          "attributeKey": "column4",
+          "renderer": null
+        }
+      ],
+      "data": [
+        {
+          "column1": "Party Name :",
+          "column2": "{{fromPartyName}}",
+          "column3": "{{billingAddress.name}}",
+          "column4": "{{shippingAddress.name}}"
+        },
+        {
+          "column1": "GSTIN :",
+          "column2": "{{fromTin}}",
+          "column3": "{{toTin}}",
+          "column4": "{{toTin}}"
+        },
+        {
+          "column1": "PAN :",
+          "column2": "{{panNo}}",
+          "column3": "",
+          "column4": ""
+        },
+        {
+          "column1": "Address :",
+          "column2": "RA-3, M/s CJ Darcl Logistics Limited, \nRatan Logistics & Industrial Hub Village, \nBhiwandi, Amane, \nThane, Maharashtra, 421302",
+          "column3": "Sruthi Chaitanya\n15, 4th main road Indra nagar adyar \nChennai , Tamil Nadu - 33\nIN , 600020\n9710344444",
+          "column4": "Sruthi Chaitanya\n15, 4th main road Indra nagar adyar \nChennai , Tamil Nadu - 33\nIN , 600020\n9710344444"
+        },
+        {
+          "column1": "Eamil :",
+          "column2": "{{fromAddress.email}}",
+          "column3": "{{billingAddress.email}}",
+          "column4": "{{shippingAddress.email}}"
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "x": 20,
+      "y": 370,
+      "width": 100,
+      "height": 3,
+      "text": "Tax Details",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TABLE",
+      "x": 20,
+      "y": 290,
+      "width": null,
+      "height": null,
+      "properties": {
+        "x": 20,
+        "y": 290,
+        "startIndex": 1,
+        "parentAttribute": "orderLineItems"
+      },
+      "headers": [
+        {
+          "label": "#",
+          "property": "slNo",
+          "width": 30,
+          "attributeKey": "slNo",
+          "renderer": null
+        },
+        {
+          "label": "Item/SKU/EAN",
+          "property": "sku",
+          "width": 70,
+          "attributeKey": "sku",
+          "renderer": null
+        },
+        {
+          "label": "Description",
+          "property": "description",
+          "width": 110,
+          "attributeKey": "description",
+          "renderer": null
+        },
+        {
+          "label": "Quantity",
+          "property": "quantity",
+          "width": 30,
+          "attributeKey": "quantity",
+          "renderer": null
+        },
+        {
+          "label": "MRP",
+          "property": "mrp",
+          "width": 50,
+          "attributeKey": "mrp",
+          "renderer": null
+        },
+        {
+          "label": "Base Price",
+          "property": "baseSellingPricePerUnit",
+          "width": 60,
+          "attributeKey": "baseSellingPricePerUnit",
+          "renderer": null
+        },
+        {
+          "label": "Base Amt",
+          "property": "baseSellingPriceTotal",
+          "width": 60,
+          "attributeKey": "baseSellingPriceTotal",
+          "renderer": null
+        },
+        {
+          "label": "Tax Amt",
+          "property": "taxTotal",
+          "width": 60,
+          "attributeKey": "taxTotal",
+          "renderer": null
+        },
+        {
+          "label": "Total",
+          "property": "totalAmount",
+          "width": 80,
+          "attributeKey": "totalAmount",
+          "renderer": null
+        }
+      ],
+      "data": [
+        {
+          "slNo": "{{slNo}}",
+          "sku": "{{channelSku}}",
+          "description": "{{description}}",
+          "quantity": "{{quantity}}",
+          "mrp": "{{mrp}}",
+          "baseSellingPricePerUnit": "{{baseSellingPricePerUnit}}",
+          "baseSellingPriceTotal": "{{baseSellingPriceTotal}}",
+          "taxTotal": "{{taxTotal}}",
+          "totalAmount": "{{totalAmount}}"
+        }
+      ]
+    },
+    {
+      "type": "TABLE",
+      "x": 20,
+      "y": 390,
+      "width": null,
+      "height": null,
+      "properties": {
+        "x": 20,
+        "y": 390,
+        "startIndex": 1,
+        "parentAttribute": "taxDetailsList"
+      },
+      "headers": [
+        {
+          "label": "#",
+          "property": "slNo",
+          "width": 30,
+          "attributeKey": "slNo",
+          "renderer": null
+        },
+        {
+          "label": "Item/SKU/EAN",
+          "property": "sku",
+          "width": 110,
+          "attributeKey": "sku",
+          "renderer": null
+        },
+        {
+          "label": "Item Tax Code",
+          "property": "hsnId",
+          "width": 75,
+          "attributeKey": "hsnId",
+          "renderer": null
+        },
+        {
+          "label": "Tax Rate breakup",
+          "property": "taxRateBreakup",
+          "width": 170,
+          "attributeKey": "taxRateBreakup",
+          "renderer": null
+        },
+        {
+          "label": "Tax Amount breakup",
+          "property": "taxAmountBreakup",
+          "width": 170,
+          "attributeKey": "taxAmountBreakup",
+          "renderer": null
+        }
+      ],
+      "data": [
+        {
+          "slNo": "{{slNo}}",
+          "sku": "{{channelSku}}",
+          "hsnId": "{{hsnId}}",
+          "taxRateBreakup": "| IGST : {{igstTaxRate}} | SGST : {{sgstTaxRate}} | CGST : {{cgstTaxRate}} |",
+          "taxAmountBreakup": "| IGST : {{igstTaxAmount}} | SGST : {{sgstTaxAmount}} | CGST : {{cgstTaxAmount}} |"
+        }
+      ]
+    },
+    {
+      "type": "TEXT",
+      "x": 10,
+      "y": 450,
+      "width": 100,
+      "height": 3,
+      "text": "Remarks",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "TEXT",
+      "x": 12,
+      "y": 465,
+      "width": 100,
+      "height": 3,
+      "text": "Delivery at Supplier location",
+      "font": "Helvetica",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "RECTANGLE",
+      "x": 10,
+      "y": 460,
+      "width": 570,
+      "height": 90,
+      "x2": 580,
+      "y2": 550
+    }
+  ]
+}
