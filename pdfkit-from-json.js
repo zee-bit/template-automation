@@ -33,12 +33,14 @@ const jsbarcode = require('jsbarcode');
 const bwip = require('bwip-js')
 // const dataUriToBuffer = require('data-uri-to-buffer');
 
+
 const toDataURLAsync = util.promisify(QRCode.toDataURL);
+
 
 const generateInvoice = async (jsonData) => {
   const doc = new PDFDocument(jsonData.pageProperties.options);
 
-  const stream = fs.createWriteStream('invoice-from-json.pdf');
+  const stream = fs.createWriteStream('invoice-from-json-final.pdf');
   // Pipe the PDF output to a file
   doc.pipe(stream);
 
@@ -109,9 +111,11 @@ const generateInvoice = async (jsonData) => {
   doc.end();
 };
 
+
 const drawImage = (doc, item) => {
   doc.image(item.url, item.x, item.y, { width: item.width });
 };
+
 
 const generateQRCode = async (doc, item) => {
 
@@ -123,6 +127,7 @@ const generateQRCode = async (doc, item) => {
       console.error('Error generating QR code:', error);
   }
 };
+
 
 const drawQRCode = async (doc, item) => {
   // QRCode.toDataURL("skjdskjcd")
@@ -170,6 +175,7 @@ const drawQRCode = async (doc, item) => {
   // });
 }
 
+
 const drawBarcode = async (doc, item) => {
   
   // doc.moveTo(item.x, item.y);
@@ -206,6 +212,7 @@ const generateBarcode = async (data, item) => {
   });
 };
 
+
 const drawQRCodeAsync = async (doc, item) => {
   try {
     const url = await QRCode.toDataURL('Actual QR Code Data');
@@ -215,21 +222,25 @@ const drawQRCodeAsync = async (doc, item) => {
   }
 };
 
+
 const drawLine = (doc, item) => {
   doc.strokeColor('black');
-  doc.lineWidth(item.lineWidth);
-  doc.moveTo(item.x1, item.y1).lineTo(item.x2,item.y2).stroke();
+  doc.lineWidth(item.lineWidth ? item.lineWidth : 0.7);
+  doc.moveTo(item.x, item.y).lineTo(item.x2,item.y2).stroke();
 }
+
 
 const drawRectangle = (doc, item) => {
   doc.strokeColor('black');
-  doc.lineWidth(item.lineWidth);
-  doc.rect(item.x1, item.y1, (item.x2-item.x1), (item.y2-item.y1)).stroke();
+  doc.lineWidth(item.lineWidth ? item.lineWidth : 0.6);
+  doc.rect(item.x, item.y, (item.x2-item.x), (item.y2-item.y)).stroke();
 }
+
 
 const drawText = (doc, item) => {
   doc.font(item.font).fontSize(item.fontSize).text(item.text, item.x, item.y);
 };
+
 
 const drawAddress = (doc, item) => {
   const { header, data } = item;
@@ -237,11 +248,13 @@ const drawAddress = (doc, item) => {
   drawAddressData(doc, data, data.x, data.y);
 };
 
+
 const drawAddressData = (doc, address, x, y) => {
   doc.font('Helvetica').fontSize(12).text(address.name, x, y);
   doc.text(address.street, x, y + 20);
   doc.text(`${address.city}, ${address.state} ${address.zip}`, x, y + 40);
 };
+
 
 const drawStandardTable = (doc, item) => {
   doc.x = item.properties.x;
@@ -258,6 +271,7 @@ const drawStandardTable = (doc, item) => {
 	});
 	doc.moveDown(1);
 }
+
 
 const drawTableLib = (doc, item) => {
 	// doc.moveDown()
@@ -277,6 +291,7 @@ const drawTableLib = (doc, item) => {
 	});
 	doc.moveDown(1);
 }
+
 
 const drawTable = (doc, item) => {
   const { properties, headers, data } = item;

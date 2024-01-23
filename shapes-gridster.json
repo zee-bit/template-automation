@@ -1,0 +1,56 @@
+{
+    "template": [
+        {
+            "componentUniqueName": "component-instance-0",
+            "componentType": "shape",
+            "componentData": {
+                "horizontal": true,
+                "flip": false,
+                "background": "#ffffff",
+                "type": "line",
+                "color": "#ffffff",
+                "borderType": "solid",
+                "borderColor": "#000000",
+                "borderWidth": "1",
+                "alignment": "center",
+                "class": "line"
+            },
+            "dashboard": {
+                "x": 13,
+                "y": 4,
+                "cols": 10,
+                "rows": 10,
+                "hasContent": true,
+                "layerIndex": 6
+            }
+        },
+        {
+            "componentUniqueName": "component-instance-1",
+            "componentType": "shape",
+            "componentData": {
+                "horizontal": true,
+                "flip": false,
+                "background": "#ffffff",
+                "type": "rectangle",
+                "color": "#ffffff",
+                "borderType": "solid",
+                "borderColor": "#000000",
+                "borderWidth": "1",
+                "alignment": "center",
+                "class": "rectangle"
+            },
+            "dashboard": {
+                "x": 23,
+                "y": 4,
+                "cols": 10,
+                "rows": 10,
+                "hasContent": true,
+                "layerIndex": 4
+            }
+        }
+    ],
+    "gridDimensions": {
+        "rows": 50,
+        "cols": 50
+    }
+}

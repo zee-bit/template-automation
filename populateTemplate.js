@@ -112,7 +112,7 @@ const populateTablesDynamically = (template, dataList, parentAttribute) => {
 
 
 // Read template JSON and mapping JSON from files
-const templateJson = JSON.parse(fs.readFileSync('placeholder_template_recursive.json', 'utf-8'));
+const templateJson = JSON.parse(fs.readFileSync('converted.json', 'utf-8'));
 const mappingJson = JSON.parse(fs.readFileSync('mapping.json', 'utf-8'));
 
 

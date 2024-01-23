@@ -1,7 +1,9 @@
 const fs = require('fs');
 
 // Read the original JSON file
-const originalJson = require('./Gridster.json');
+const originalJson = require('./gridster_invoice.json');
+// const { width } = require('pdfkit/js/page');
+const { compileFunction } = require('vm');
 const DEFAULT_FONT = 'Helvetica';
 const DEFAULT_FONT_SIZE = 10;
 
@@ -13,7 +15,8 @@ function convertComponentData(component) {
     'image': 'IMAGE',
     'table': 'TABLE',
     'barcode': 'BARCODE',
-    'qr': "QR",
+    'rectangle': 'RECTANGLE',
+    'qrcode': "QR",
     // Add more mappings for other component types as needed
   };
 
@@ -28,12 +31,12 @@ function convertComponentData(component) {
   switch (component.componentType) {
     case 'image':
         // Handle Logo
-        newData.url = component.componentData.url;
+        newData.url = component.componentData.imgUrl;
         break;
 
-    case 'qr':
+    case 'qrcode':
       // Handle QR Code
-      
+      newData.data = component.componentData.qrData;
       break;
 
     case 'text':
@@ -46,7 +49,9 @@ function convertComponentData(component) {
 
     case 'table':
       // Handle Table
-      drawTableLib(doc, item);
+      newData.properties = setProperties(component);
+      newData.headers = setHeaders(component.componentData);
+      newData.data = setRows(component.componentData);
       break;
 
     case 'barcode':
@@ -56,9 +61,19 @@ function convertComponentData(component) {
       break;
 
     case 'line':
-      newData.x2 = component.componentData.col;
-      newData.y2 = component.componentData.row;
+      // Handle line
+      newData.x = component.dashboard.x1;
+      newData.y = component.dashboard.y1;
+      newData.x2 = newData.x + component.dashboard.cols;
+      newData.y2 = newData.y + component.dashboard.rows;
       break;
+
+    case 'rectangle':
+      // Handle rectangle shape
+      newData.x = component.dashboard.x1;
+      newData.y = component.dashboard.y1;
+      newData.x2 = newData.x + component.dashboard.cols;
+      newData.y2 = newData.y + component.dashboard.rows;
 
     // Add more cases for other types if needed
 
@@ -76,6 +91,69 @@ function convertComponentData(component) {
 
   return newData;
 }
+
+
+function setProperties(component) {
+  let properties = {}
+  properties.x = component.dashboard.x;
+  properties.y = component.dashboard.y;
+  properties.startIndex = component.componentData.startIndex ? component.componentData.startIndex : 1;
+  properties.parentAttribute = component.componentData.parentAttribute;
+  return properties;
+}
+
+
+function setHeaders(componentData) {
+  let headers = []
+  let headerKeyPrefix = "0.";
+  for (let i=0; i < componentData.cols; i++) {
+    let headerKey = headerKeyPrefix + i;
+    width = componentData.data[headerKey].width;
+    value = componentData.data[headerKey].value;
+    attributeKey = componentData.data[headerKey].attributeKey;
+    let header = {
+      "label": value,
+      "property": attributeKey,
+      "width": width,
+      "attributeKey": attributeKey,
+      "renderer": null
+    }
+    headers.push(header)
+  }
+  return headers;
+}
+
+
+function setRows(componentData) {
+  let datas = []
+  for (let i=1; i < componentData.rows; i++) {
+    let row = {}
+    let dataKeyPrefix = i + ".";
+    for (let j=0; j < componentData.cols; j++) {
+      let headerKey = "0." + j;
+      let dataKey = dataKeyPrefix + j;
+      attributeKey = componentData.data[headerKey].attributeKey;
+      row[attributeKey] = componentData.data[dataKey].value;
+      // width = componentData.data.get(dataKey).width;
+      // value = componentData.data.get(dataKey).value;
+      // attributeKey = componentData.data.get(dataKey).attributeKey;
+      // let row = {
+      //   ""
+      // }
+      // let header = {
+      //   "label": value,
+      //   "property": value,
+      //   "width": width,
+      //   "attributeKey": attributeKey,
+      //   "renderer": null
+      // }
+      // headers.push(header)
+    }
+    datas.push(row);
+  }
+  return datas;
+}
+
 
 // Function to convert the entire JSON structure
 function convertJson(originalJson) {

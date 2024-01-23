@@ -194,28 +194,6 @@
             }
         },
         {
-            "componentUniqueName": "component-instance-8",
-            "componentType": "text",
-            "componentData": {
-                "editorContent": "Order #: {{orderNo}}",
-                "horizontal": true,
-                "flip": false,
-                "mapAttr": false,
-                "attrCategory": null,
-                "attrKey": "",
-                "background": "#ffffff",
-                "letterSpacing": 0
-            },
-            "dashboard": {
-                "x": 300,
-                "y": 60,
-                "cols": 100,
-                "rows": null,
-                "hasContent": true,
-                "layerIndex": 209
-            }
-        },
-        {
             "componentUniqueName": "component-instance-9",
             "componentType": "text",
             "componentData": {
@@ -308,10 +286,8 @@
             "dashboard": {
                 "x1": 20,
                 "y1": 45,
-                "x2": 560,
-                "y2": 45,
-                "cols": 100,
-                "rows": null,
+                "cols": 540,
+                "rows": 0,
                 "hasContent": true,
                 "layerIndex": 209
             }
@@ -355,19 +331,23 @@
                 "data": {
                     "0.0": {
                         "width": 70,
-                        "value": ""
+                        "value": "",
+                        "attributeKey": "column1"
                     },
                     "0.1": {
                         "width": 160,
-                        "value": "FROM TO"
+                        "value": "FROM TO",
+                        "attributeKey": "column2"
                     },
                     "0.2": {
                         "width": 160,
-                        "value": "BILLING TO"
+                        "value": "BILLING TO",
+                        "attributeKey": "column3"
                     },
                     "0.3": {
                         "width": 160,
-                        "value": "SHIPPING TO"
+                        "value": "SHIPPING TO",
+                        "attributeKey": "column4"
                     },
                     "1.0": {
                         "width": 70,
@@ -501,44 +481,54 @@
                 "border": "complete",
                 "borderColor": "#000000",
                 "borderWidth": "1px",
-                "rows": 3,
+                "parentAttribute": "orderLineItems",
+                "rows": 2,
                 "cols": 9,
                 "data": {
                     "0.0": {
                         "width": 30,
-                        "value": "#"
+                        "value": "#",
+                        "attributeKey": "slNo"
                     },
                     "0.1": {
                         "width": 70,
-                        "value": "Item/SKU/EAN"
+                        "value": "Item/SKU/EAN",
+                        "attributeKey": "sku"
                     },
                     "0.2": {
                         "width": 110,
-                        "value": "Description"
+                        "value": "Description",
+                        "attributeKey": "description"
                     },
                     "0.3": {
                         "width": 30,
-                        "value": "Quantity"
+                        "value": "Quantity",
+                        "attributeKey": "quantity"
                     },
                     "0.4": {
                         "width": 50,
-                        "value": "MRP"
+                        "value": "MRP",
+                        "attributeKey": "mrp"
                     },
                     "0.5": {
                         "width": 60,
-                        "value": "Base Price"
+                        "value": "Base Price",
+                        "attributeKey": "baseSellingPricePerUnit"
                     },
                     "0.6": {
                         "width": 60,
-                        "value": "Base Amt"
+                        "value": "Base Amt",
+                        "attributeKey": "baseSellingPriceTotal"
                     },
                     "0.7": {
                         "width": 60,
-                        "value": "Tax Amt"
+                        "value": "Tax Amt",
+                        "attributeKey": "taxTotal"
                     },
                     "0.8": {
                         "width": 80,
-                        "value": "Total"
+                        "value": "Total",
+                        "attributeKey": "totalAmount"
                     },
                     "1.0": {
                         "width": 30,
@@ -554,11 +544,11 @@
                     },
                     "1.3": {
                         "width": 30,
-                        "value": "{{mrp}}"
+                        "value": "{{quantity}}"
                     },
                     "1.4": {
                         "width": 50,
-                        "value": "{{quantity}}"
+                        "value": "{{mrp}}"
                     },
                     "1.5": {
                         "width": 60,
@@ -604,47 +594,53 @@
                 "border": "complete",
                 "borderColor": "#000000",
                 "borderWidth": "1px",
+                "parentAttribute": "taxDetailsList",
                 "rows": 2,
                 "cols": 5,
                 "data": {
                     "0.0": {
                         "width": 30,
-                        "value": "#"
+                        "value": "#",
+                        "attributeKey": "slNo"
                     },
                     "0.1": {
-                        "width": 70,
-                        "value": "Item/SKU/EAN"
+                        "width": 110,
+                        "value": "Item/SKU/EAN",
+                        "attributeKey": "sku"
                     },
                     "0.2": {
-                        "width": 110,
-                        "value": "Item Tax Code"
+                        "width": 75,
+                        "value": "Item Tax Code",
+                        "attributeKey": "hsnId"
                     },
                     "0.3": {
-                        "width": 30,
-                        "value": "Tax Rate breakup"
+                        "width": 170,
+                        "value": "Tax Rate breakup",
+                        "attributeKey": "taxRateBreakup"
                     },
                     "0.4": {
-                        "width": 50,
-                        "value": "Tax Amount breakup"
+                        "width": 170,
+                        "value": "Tax Amount breakup",
+                        "attributeKey": "taxAmountBreakup"
                     },
                     "1.0": {
                         "width": 30,
                         "value": "{{slNo}}"
                     },
                     "1.1": {
-                        "width": 70,
+                        "width": 110,
                         "value": "{{channelSku}}"
                     },
                     "1.2": {
-                        "width": 110,
+                        "width": 75,
                         "value": "{{hsnId}}"
                     },
                     "1.3": {
-                        "width": 30,
+                        "width": 170,
                         "value": "| IGST : {{igstTaxRate}} | SGST : {{sgstTaxRate}} | CGST : {{cgstTaxRate}} |"
                     },
                     "1.4": {
-                        "width": 50,
+                        "width": 170,
                         "value": "| IGST : {{igstTaxAmount}} | SGST : {{sgstTaxAmount}} | CGST : {{cgstTaxAmount}} |"
                     }
                 },
